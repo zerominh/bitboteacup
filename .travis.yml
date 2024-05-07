@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 14
+
+deploy:
+  provider: npm
+  email: open-source@goodeggs.com
+  api_key:
+      secure: "icYg0/Uoqn+p7IssXSu9gFmtYOvUJ5lemA/MfTnO6QkNqdOSxBuB9jwv3CwiX4kqQTMkidanluMD7xdCz4wVnDuCiIM/P7cN7nMKHFd8vOEJV1Op6FOkOViF1YcVVdaUqQqnoAQhKxG3ELte8ZJ5LEyovBPnae6F+ZZ6gJWRjB4="
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true

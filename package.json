@@ -1,0 +1,41 @@
+{
+  "name": "teacup",
+  "version": "2.0.0",
+  "description": "Render HTML with native CoffeeScript templates. No magic, no fuss.",
+  "homepage": "http://goodeggs.github.com/teacup/",
+  "license": "MIT",
+  "main": "lib/teacup",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/goodeggs/teacup.git"
+  },
+  "keywords": [
+    "template",
+    "coffeescript",
+    "coffee-script",
+    "coffee",
+    "render",
+    "view",
+    "html",
+    "coffeekup",
+    "coffeecup",
+    "drykup",
+    "express"
+  ],
+  "devDependencies": {
+    "benchmark": "~1.0.0",
+    "coffee-script": ">=1.8.0",
+    "connect-assets": "*",
+    "dot": "~1.0.3",
+    "expect.js": "*",
+    "jade": "~1.9.2",
+    "mocha": "^9.1.1"
+  },
+  "scripts": {
+    "pretest": "yarn run compile",
+    "prepublish": "yarn run compile",
+    "test": "mocha --extension coffee --require coffee-script/register",
+    "compile": "coffee --compile --output lib/ src/",
+    "benchmark": "coffee benchmark/index.coffee"
+  }
+}
